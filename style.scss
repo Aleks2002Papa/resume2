@@ -1,0 +1,304 @@
+/*
+Theme Name: Theme Name
+Theme URI: https://example.com
+Description: Theme Description
+Author: Author Name
+Author URI: https://authordomain.com/
+Version: 1.0
+Text Domain: example
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,700");
+
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css";
+
+// Include any default variable overrides here (though functions won't be available)
+$enable-responsive-font-sizes: true;
+
+$font-family-sans-serif: "Roboto",
+sans-serif;
+
+$theme-colors: ("blue": #007bff,
+    "indigo": #6610f2,
+    "purple": #6f42c1,
+    "pink": #f5e6e1,
+    "red": #dc3545,
+    "orange": #fd7e14,
+    "yellow": #ffc107,
+    "green": #28a745,
+    "teal": #20c997,
+    "cyan": #17a2b8,
+    "white": #ffffff,
+    "gray": #6c757d,
+    "gray-dark": #343a40,
+    "primary": #007bff,
+    "secondary": #6c757d,
+    "success": #28a745,
+    "info": #17a2b8,
+    "warning": #ffc107,
+    "danger": #dc3545,
+    "light": #f8f9fa,
+    "dark": #343a40,
+    "custom-color": #f7f7f7,
+);
+
+@import "node_modules/bootstrap/scss/bootstrap";
+// Then add additional custom code here
+
+/* Example with custom color */
+body {
+    background-color: map_get($theme-colors, 'custom-color');
+}
+
+.underline:hover {
+    border-bottom: 1px solid #000;
+}
+
+.underline-small {
+    position: relative;
+    display: inline-block;
+}
+
+.underline-small::after {
+    content: "";
+    height: 2px;
+    background: black;
+    position: absolute;
+    left: 8px;
+    bottom: 0;
+}
+
+
+.underline-small:hover::after {
+    width: 60%;
+}
+
+.circle {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.vertical-text {
+    position: relative;
+    transform: rotate(270deg);
+    transform-origin: 0 0;
+}
+
+.line {
+    width: 40px;
+    height: 2px;
+    background-color: #343a40;
+}
+
+.line-red {
+    width: 40px;
+    height: 2px;
+    background-color: red;
+}
+
+.red-heart {
+    color: red;
+}
+
+.btn:focus {
+    box-shadow: unset !important;
+}
+
+.box {
+    height: 540px;
+}
+
+.box-1 {
+    height: 255px;
+}
+
+.box-2 {
+    height: 255px;
+}
+
+.box-3 {
+    height: 600px;
+    width: 1400px;
+}
+
+.box-4 {
+    height: 320px;
+
+}
+
+.bg-1 {
+    background-color: #e7e7e7;
+}
+
+.bg-2 {
+    background-color: #e5e2dd;
+}
+
+.fs-hl {
+    font-size: 12px;
+}
+
+.bg-img-1 {
+    background-image: url(/images/deal_ofthe_week.png);
+    background-color: #e5e2dd;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.bg-img {
+    background-image: url(/images/deal_ofthe_week.png);
+    background-color: #e5e2dd;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.bg-man-collection {
+    background-image: url(/images/deal_ofthe_week.png);
+    background-color: #e5e2dd;
+    background-repeat: no-repeat;
+    background-position: unset;
+}
+
+.bg-img-girl {
+    background-image: url(/images/deal_ofthe_week.png);
+    background-color: #e7e7e7;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.bg-img-pallto {
+    background-image: url(https://media.gucci.com/style/DarkGray_South_0_160_540x540/1614853813/662241_ZAG98_4535_001_100_0000_Light.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+
+
+.red-bg {
+    background: linear-gradient(90deg, rgba(216, 4, 28, 0.7) 0%, rgba(216, 4, 28, 0.7) 100%), url(https://res.cloudinary.com/trunk-club/image/upload/f_auto,q_auto/Blog/20055_Purses_Header_V2.jpg);
+    background-size: cover;
+    background-position: center; // ku e ke ngjyren origjinale
+}
+
+.position-icon {
+    position: absolute;
+    left: -10px;
+    top: 32%
+}
+
+.position-text {
+    position: absolute;
+    left: -5px;
+    top: 205px;
+}
+
+.width {
+    width: 100px;
+}
+
+.position-scroll {
+    position: absolute;
+    bottom: 0;
+}
+
+.swiper-position-left {
+    position: absolute;
+    top: 146px;
+    left: -20px;
+    z-index: 1;
+}
+
+.swiper-position-right {
+    position: absolute;
+    right: -20px;
+    top: 146px;
+}
+
+
+/* Bootstrap Extra */
+@include media-breakpoint-down(lg) {}
+
+@include media-breakpoint-down(md) {
+    .bg-img-1 {
+        background-image: url(/images/deal_ofthe_week.png);
+        background-color: #e5e2dd;
+        background-repeat: no-repeat;
+        background-position: left;
+    }
+
+    .box-2 {
+        height: 215px;
+    }
+
+    .box {
+        height: 460px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .box {
+        height: 255px;
+    }
+
+    .bg-img-1 {
+        background-image: url(/images/deal_ofthe_week.png);
+        background-color: #e5e2dd;
+        background-repeat: no-repeat;
+        background-position: left;
+    }
+
+    .bg-sm-img {
+        background-image: url(/images/deal_ofthe_week.png);
+        background-color: #e5e2dd;
+        background-repeat: no-repeat;
+        background-position: left;
+    }
+
+    .box-sm-3 {
+        height: 600px;
+        width: auto;
+    }
+
+    .swiper-position-left {
+        position: absolute;
+        z-index: 1;
+        left: 5px;
+        top: 100px;
+    }
+
+    .swiper-position-right {
+        position: absolute;
+        z-index: 1;
+        right: 5px;
+        top: 100px;
+    }
+
+    .underline-small {
+        position: relative;
+        display: inline-block;
+    }
+
+    .underline-small::after {
+        content: "";
+        height: 2px;
+        background: black;
+        position: absolute;
+        left: 8px;
+        bottom: 0;
+    }
+
+
+    .underline-small:hover::after {
+        width: 60%;
+    }
+}
+
+.header-border {
+    border: 5px solid #f7f7f7;
+    outline: 1px solid #f5e6e1;
+}
+
+@include media-breakpoint-down(xs) {}
+
+/* Custom styles here */
