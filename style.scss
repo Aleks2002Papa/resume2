@@ -161,7 +161,7 @@ body {
     background-image: url(/images/deal_ofthe_week.png);
     background-color: #e5e2dd;
     background-repeat: no-repeat;
-    background-position: unset;
+    background-position-x: calc(100% + 80px);
 }
 
 .bg-img-girl {
