@@ -96,8 +96,13 @@ body {
     background-color: red;
 }
 
-.red-heart {
-    color: red;
+.heart-filled {
+    background: url('heart-filled-icon.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    height: 17px;
+    width: 20px;
 }
 
 .btn:focus {

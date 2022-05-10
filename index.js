@@ -91,5 +91,16 @@ var swiper = new Swiper(".mySwiper", {
 const changeColor = () => {
       console.log('1')
 }
-document.querySelector("#red").addEventListener("onclick", changeColor)
-
+document.querySelectorAll(".heart-favorite-shop").forEach(heartElm => {
+      heartElm.addEventListener("click", () => {
+            if (heartElm.classList.contains("fa-heart") && heartElm.classList.contains("fa-regular")) {
+                  heartElm.classList.remove("fa-heart");
+                  heartElm.classList.remove("fa-regular");
+                  heartElm.classList.add("heart-filled");
+            } else if (heartElm.classList.contains("heart-filled")) {
+                  heartElm.classList.remove("heart-filled");
+                  heartElm.classList.add("fa-heart");
+                  heartElm.classList.add("fa-regular");
+            }
+      })
+});
